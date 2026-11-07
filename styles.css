@@ -1,0 +1,136 @@
+/* ===================== ЛР4 (додано) ===================== */
+
+/* Кнопка перемикання теми */
+#theme-toggle {
+  align-self: flex-end;
+  padding: 8px 14px;
+  border: 1px solid #aa3bff;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #aa3bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  background: #aa3bff;
+  color: #ffffff;
+}
+
+/* Відгуки */
+#reviews small {
+  color: #6b6375;
+}
+
+/* Список з localStorage у футері */
+.storage-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  text-align: left;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+/* Модальне вікно */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal {
+  background: #ffffff;
+  color: #333333;
+  width: 100%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.modal input,
+.modal textarea {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  border: 1px solid #c9c7cf;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #aa3bff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.modal-buttons #modal-close {
+  background: #8a8794;
+}
+
+/* Нічна тема */
+body.dark-mode {
+  background-color: #121018;
+  color: #e6e4ea;
+}
+
+body.dark-mode #root {
+  background: #1c1a24;
+  border-color: #38353f;
+}
+
+body.dark-mode h2 {
+  color: #f1eff5;
+}
+
+body.dark-mode .card {
+  background-color: #25222e;
+  border-color: #38353f;
+}
+
+body.dark-mode .grid-container .card:nth-child(even) {
+  background-color: #2b2736;
+}
+
+body.dark-mode footer {
+  background-color: #25222e !important; /* перекриває внутрішні стилі у <style> */
+}
+
+body.dark-mode #theme-toggle {
+  background: #25222e;
+}
+
+body.dark-mode #reviews small {
+  color: #a9a5b3;
+}
+

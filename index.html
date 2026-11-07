@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Цибульська Марія</title>
+
+    <!-- 1. EXTERNAL (Зовнішній файл styles.css) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 2. INTERNAL (Внутрішні стилі для футера) -->
+    <style>
+        footer {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f4f3ec;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Контейнер з ID #root (Flexbox макет) -->
+    <div id="root">
+
+        <!-- Кнопка перемикання теми (ЛР4) -->
+        <button id="theme-toggle" type="button">🌙 Нічна тема</button>
+
+        <!-- 3. INLINE (Вбудований стиль прямо у заголовок) -->
+        <h1 style="color: #aa3bff; margin-bottom: 5px;">Цибульська Марія</h1>
+
+        <p class="contact-info">
+            Контактна інформація:
+            <a href="mailto:email@example.com" target="_blank">email@example.com</a>
+        </p>
+
+        <section>
+            <h2>Про мене</h2>
+            <p>Я --- цілеспрямована студентка, яка захоплюється створенням вебзастосунків. Активно вивчаю сучасні вебтехнології та маю велике бажання розвиватися в IT-сфері. Швидко навчаюся новому, вмію шукати інформацію та обожнюю розв'язувати логічні задачі.</p>
+        </section>
+
+        <!-- Макет CSS Grid з картками навичок -->
+        <section>
+            <h2>Навички</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Вебтехнології</h3>
+                    <p>Розуміння принципів роботи Інтернету та клієнт-серверної архітектури</p>
+                </div>
+                <div class="card">
+                    <h3>Soft Skills</h3>
+                    <p>Тайм-менеджмент та вміння працювати в команді</p>
+                </div>
+                <div class="card">
+                    <h3>Іноземні мови</h3>
+                    <p>Англійська мова на рівні читання технічної документації</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Освіта</h2>
+            <div class="card">
+                <h3>Національний університет «Львівська політехніка»</h3>
+                <p>Спеціальність «Кібербезпека»</p>
+            </div>
+        </section>
+
+        <!-- ЛР4: відгуки колишніх роботодавців (fetch) -->
+        <section>
+            <h2>Відгуки колишніх роботодавців</h2>
+            <div id="reviews" class="grid-container">
+                <p>Завантаження...</p>
+            </div>
+        </section>
+
+        <!-- ЛР4: футер з вмістом localStorage -->
+        <footer>
+            <p>2026. Створено для лабораторної роботи.</p>
+            <div id="storage-info"></div>
+        </footer>
+    </div>
+
+    <!-- ЛР4: модальне вікно з формою зворотного зв'язку -->
+    <div id="modal" class="modal-overlay" hidden>
+        <div class="modal">
+            <h2>Зворотний зв'язок</h2>
+            <!-- Замініть YOUR_ENDPOINT на ендпоінт вашої форми з formspree.io -->
+            <form action="https://formspree.io/f/xgaangkp" method="POST">
+                <label>Ім'я
+                    <input type="text" name="name" required>
+                </label>
+                <label>Email
+                    <input type="email" name="email" required>
+                </label>
+                <label>Номер телефону
+                    <input type="tel" name="phone" required>
+                </label>
+                <label>Повідомлення
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+                <div class="modal-buttons">
+                    <button type="submit">Надіслати</button>
+                    <button type="button" id="modal-close">Закрити</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
